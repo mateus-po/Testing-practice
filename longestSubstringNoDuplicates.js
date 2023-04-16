@@ -1,40 +1,51 @@
 
 
-function longestSubstring(testString){
+function longestSubstring(testString, caseSensitive = true) {
     // function finds the length of the longest substring without repeating characters
+    // and returns it as an interger
+    // returns -1 if given argument is neither of string type or of type possible to convert to string
 
-    let characters = []
+    // caseSensitive argument allows to choose whether function will or won't be case sensitive
+
+
+
+    // first making sure that given argument is of string type
+    // or of type easly converted to string
+    if (typeof(testString) !== "string") {
+        try {
+            testString = testString.toString();
+        } catch {
+            return -1;
+        }
+    };
+
+    // in case of case insensitivity, this line turns all capital letters to small letters
+    if (!caseSensitive) testString = testString.toLowerCase();
+
+    let characters_arr = []; // array of characters that are already in analyzed substring
     let longest = 0;
-    let current_begining = 0;
 
-    for (const [index, character] of testString.split("").entries()) {
-        // if in characterDict there's no currect character yet
-        if (!characters.includes(character)) {
-            characters.push(character)
+    for (character of testString) {
+        // if character isn't already in the analyzed substring, we add it to the array
+        if (!characters_arr.includes(character)) {
+            characters_arr.push(character)
         }
         else {
-            let window = index - current_begining
-            current_begining += characters.indexOf(character)+1
-            
-            
-            characters = characters.slice(characters.indexOf(character)+1)
-            characters.push(character)
 
-            if (window > longest) {
-                longest = window
+            if (characters_arr.length > longest) {
+                longest = characters_arr.length;
             }
+            // deleting all characters that perecede the character that repeated (including the repeated)
+            characters_arr = characters_arr.slice(characters_arr.indexOf(character)+1)
+            characters_arr.push(character)
 
         }
 
     }
-    if (longest < testString.length-current_begining) longest = testString.length-current_begining
+    // chcecking if the longest substring without repetition is at the end of string
+    if (characters_arr.length > longest) longest = characters_arr.length
     return longest
 
 }
 
-testingstrings = ["abcabcabc","aaaaaaaaaaaaaaabbbbbbbbbb", "qweertyyyyyyyyyy",
-                  "yyyyyyyyyyyyyyyyyqwerty", "asdfasdfasgddsadgfqaweheiuof",
-                  "asdbngoiaswoidnfoasidfqwertyuioplkjhgfdsazxcvbnmergjoidfjgoiedsop", "a","ab", "aa"]
-for (str of testingstrings) console.log(longestSubstring(str))
 
-// console.log(longestSubstring("abcabcabc"))
