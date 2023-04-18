@@ -21,7 +21,7 @@ Testing [sample login UI](http://uitestingplayground.com/sampleapp) is done in [
 ```
 npm install
 ```
-This will install all the dependencies that are used in the project (namely Jest and Puppeteer)
+This will install all the dependencies that are used in the project.
 
 3. To run tests from the Task 1., run:
 ```
