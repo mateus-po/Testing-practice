@@ -23,14 +23,14 @@ npm install
 ```
 This will install all the dependencies that are used in the project.
 
-3. To run tests from the Task 1., run:
+3. To run tests from the Task 1, run:
 ```
 npm test ./longestSubstring.test.js
 ```
 Screenshot of successfully ran tests:
 ![Screenshot of the tests of longestSubstring.js](screenshots/longestSubstring_test_screenshot.PNG)
 
-4. To run tests from the Task 2., run:
+4. To run tests from the Task 2, run:
 ```
 npm test ./loginUI.test.js
 ```
