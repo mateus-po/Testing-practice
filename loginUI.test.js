@@ -19,7 +19,7 @@ const str = {
 beforeAll(async () => {
   browser = await puppeteer.launch({headless:false});
   page = await browser.newPage();
-  await page.goto(pageURL, {waituntil: str.loaded}); 
+  await page.goto(str.pageURL, {waituntil: str.loaded}); 
 });
 
 beforeEach(async () => {
