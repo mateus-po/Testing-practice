@@ -8,7 +8,7 @@ Repository contains files with solution to recruitment tasks given in the file [
 Testcases can be found in [testDataset.json](Internship-Task-OpenX/testDataset.json) JSON file. Each test case follow the pattern:
 + **input** - here can be found string that will be tested
 + **output** - provides correct answer for given input
-+ **explanation** - explains the test
++ **explanation** - gives explanation to the test case, tells what is tested
 
 Furthermore, the JavaScript file [longestSubstring.js](Internship-Task-OpenX/longestSubstring.js) provides algorythm that find the lenght of the longest substring without repeating characters. File [longestSubstring.test.js](Internship-Task-OpenX/longestSubstring.test.js) allows to test the algorythm using the dataset with provided test cases. It uses Jest as a testing module.
 
@@ -16,19 +16,23 @@ Furthermore, the JavaScript file [longestSubstring.js](Internship-Task-OpenX/lon
 Testing [sample login UI](http://uitestingplayground.com/sampleapp) is done in [loginUI.test.js](Internship-Task-OpenX/loginUI.test.js). As a testing framework it also uses Jest. Additionally it uses Puppeteer module to automatically navigate the page.
 
 ## Running the tests
-1. Open command line terminal, go to the project folder and run: 
+1. First you need to have Node.js installed for example from [here](https://nodejs.org/en/download).
+2. Open command line, go to the project folder and run: 
 ```
 npm install
 ```
-This will install all the dependencies that are used in the project (Namely Jest and Puppeteer)
+This will install all the dependencies that are used in the project (namely Jest and Puppeteer)
 
-2. To run tests from the Task 1., run:
+3. To run tests from the Task 1., run:
 ```
 npm test ./longestSubstring.test.js
 ```
-![Screenshot of the tests of longestSubstring.js](Internship-Task-OpenX/screenshots/longestSubstring_test_screenshot.PNG)
-3. To run tests from the Task 2., run:
+Screenshot of successfully ran tests:
+![Screenshot of the tests of longestSubstring.js](screenshots/longestSubstring_test_screenshot.PNG)
+
+4. To run tests from the Task 2., run:
 ```
 npm test ./loginUI.test.js
 ```
-![Screenshot of the tests of loginUI.js](Internship-Task-OpenX/screenshots/loginUI_test_screenshot.PNG)
+Screenshot of successfully ran tests:
+![Screenshot of the tests of loginUI.js](screenshots/loginUI_test_screenshot.PNG)
