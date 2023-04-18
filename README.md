@@ -21,6 +21,7 @@ Testing [sample login UI](http://uitestingplayground.com/sampleapp) is done in [
 npm install
 ```
 This will install all the dependencies that are used in the project (Namely Jest and Puppeteer)
+
 2. To run tests pertinet to Task 1, run:
 ```
 npm test ./longestSubstring.test.js
