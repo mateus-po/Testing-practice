@@ -16,7 +16,7 @@ Furthermore, the JavaScript file [longestSubstring.js](Internship-Task-OpenX/lon
 Testing [sample login UI](http://uitestingplayground.com/sampleapp) is done in [loginUI.test.js](Internship-Task-OpenX/loginUI.test.js). As a testing framework it also uses Jest. Additionally it uses Puppeteer module to automatically navigate the page.
 
 ## Running the tests
-1. First you need to have Node.js installed for example from [here](https://nodejs.org/en/download).
+1. First you need to have Node.js installed (for example from [here](https://nodejs.org/en/download)).
 2. Open command line, go to the project folder and run: 
 ```
 npm install
