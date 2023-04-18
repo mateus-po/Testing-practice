@@ -10,10 +10,10 @@ Testcases can be found in [testDataset.json](Internship-Task-OpenX/testDataset.j
 + **output** - provides correct answer for given input
 + **explanation** - explains the test
 
-Furthermore, the JavaScript file [longestSubstring.js](Internship-Task-OpenX/longestSubstring.js) provides algorythm that find the lenght of the longest substring without repeating characters. File [longestSubstring.test.js](Internship-Task-OpenX/longestSubstring.test.js) allows to test the algorythm using the dataset with provided test cases. It uses "Jest" testing module.
+Furthermore, the JavaScript file [longestSubstring.js](Internship-Task-OpenX/longestSubstring.js) provides algorythm that find the lenght of the longest substring without repeating characters. File [longestSubstring.test.js](Internship-Task-OpenX/longestSubstring.test.js) allows to test the algorythm using the dataset with provided test cases. It uses Jest as a testing module.
 
 ## Task 2.
-Testing [sample login UI](http://uitestingplayground.com/sampleapp) is done in [loginUI.test.js](Internship-Task-OpenX/loginUI.test.js). As a testing framework it also uses Jest module. Additionally it uses Puppeteer module to automatically navigate the page.
+Testing [sample login UI](http://uitestingplayground.com/sampleapp) is done in [loginUI.test.js](Internship-Task-OpenX/loginUI.test.js). As a testing framework it also uses Jest. Additionally it uses Puppeteer module to automatically navigate the page.
 
 ## Running the tests
 1. Open command line terminal, go to the project folder and run: 
@@ -22,11 +22,13 @@ npm install
 ```
 This will install all the dependencies that are used in the project (Namely Jest and Puppeteer)
 
-2. To run tests pertinet to Task 1, run:
+2. To run tests from the Task 1., run:
 ```
 npm test ./longestSubstring.test.js
 ```
-3. To run tests pertinet to Task 2, run:
+![Screenshot of the tests of longestSubstring.js](Internship-Task-OpenX/screenshots/longestSubstring_test_screenshot.PNG)
+3. To run tests from the Task 2., run:
 ```
 npm test ./loginUI.test.js
 ```
+![Screenshot of the tests of loginUI.js](Internship-Task-OpenX/screenshots/loginUI_test_screenshot.PNG)
