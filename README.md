@@ -13,7 +13,7 @@ Testcases can be found in [testDataset.json](Internship-Task-OpenX/testDataset.j
 Furthermore, the JavaScript file [longestSubstring.js](Internship-Task-OpenX/longestSubstring.js) provides algorythm that find the lenght of the longest substring without repeating characters. File [longestSubstring.test.js](Internship-Task-OpenX/longestSubstring.test.js) allows to test the algorythm using the dataset with provided test cases. It uses "Jest" testing module.
 
 ## Task 2.
-Testing [sample login UI](http://uitestingplayground.com/sampleapp) is done in [loginUI.test.js](Internship-Task-OpenX/loginUI.test.js). As a testinf framework it also uses Jest module. Additionally it uses Puppeteer module to automatically navigate the page.
+Testing [sample login UI](http://uitestingplayground.com/sampleapp) is done in [loginUI.test.js](Internship-Task-OpenX/loginUI.test.js). As a testing framework it also uses Jest module. Additionally it uses Puppeteer module to automatically navigate the page.
 
 ## Running the tests
 1. Open command line terminal, go to the project folder and run: 
