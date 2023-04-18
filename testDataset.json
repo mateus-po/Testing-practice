@@ -6,6 +6,7 @@
     {"input":"aaaaabbbbbbb", "output":2, "explanation":"Longest substring is \"ab\""},
     {"input":"aA", "output":2, "explanation":"\"a\" and \"A\" are numerically different characters"},
     {"input":"1234:;><?!@#$%^&*()", "output":19, "explanation":"Testing characters not from alphabet"},
+    {"input":null, "output":-1, "explanation":"Longest substring of NULL (i.e. pf non-stringable type), should be -1"},
     {"input":"abcdefgggggggggggg", "output":10, "explanation":"Longest substring \"abcdefgij\" at the begining of the string"},
     {"input":"aaaaaaabcdefghijjjjjjjjj", "output":10, "explanation":"Longest substring \"abcdefghij\" in the middle of the string"},
     {"input":"aaaaaaaaaaaaaaaaaabcdefgh", "output":10, "explanation":"Longest substring \"abcdefghij\" at the end of the string"},

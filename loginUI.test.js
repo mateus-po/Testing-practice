@@ -4,6 +4,7 @@ let test_id = 1;
 
 // object containing frequetly used strings 
 const str = {
+  pageURL: 'http://uitestingplayground.com/sampleapp',
   loaded: 'domcontentloaded',
   correct_login: 'correct_login',
   pwd: 'pwd',
@@ -18,7 +19,7 @@ const str = {
 beforeAll(async () => {
   browser = await puppeteer.launch({headless:false});
   page = await browser.newPage();
-  await page.goto('http://uitestingplayground.com/sampleapp', {waituntil: str.loaded}); 
+  await page.goto(pageURL, {waituntil: str.loaded}); 
 });
 
 beforeEach(async () => {
@@ -203,7 +204,7 @@ describe("Tests that check standard interface features", () => {
   async () => {
 
     await page.click(str.login_input_name);
-    await page.keyboard.type("typing...");
+    await page.keyboard.type(str.correct_login);
 
     // getting the value of the login input after clicking on it, and then typing something
     const loginInputContent = await page.evaluate(() => {
@@ -211,9 +212,9 @@ describe("Tests that check standard interface features", () => {
     });
     
     expect(loginInputContent)
-      .toEqual("typing...");
+      .toEqual(str.correct_login);
 
-    await page.click('input[name=Password]');
+    await page.click(str.password_input_name);
     await page.keyboard.type(str.pwd);
 
     // getting the value of the password input after clicking on it, and then typing something
@@ -226,7 +227,7 @@ describe("Tests that check standard interface features", () => {
 
     await page.click(str.button_id);
     expect(await get_loginstatusHTML())
-      .toEqual("Welcome, typing...!");
+      .toEqual(str.successful_login_msg);
   });
 
   test(`${test_id++}. Navigating form elements using Tab and Enter keyboard keys`, 
@@ -234,7 +235,7 @@ describe("Tests that check standard interface features", () => {
 
     // first we click on the login input
     await page.click(str.login_input_name);
-    await page.keyboard.type("typing...");
+    await page.keyboard.type(str.correct_login);
 
     await page.keyboard.press("Tab");
 
@@ -258,7 +259,7 @@ describe("Tests that check standard interface features", () => {
     //checking if clicking "enter" while button is focused will log the user in
     await page.keyboard.press("Enter");
     expect(await get_loginstatusHTML())
-      .toEqual("Welcome, typing...!");
+      .toEqual(str.successful_login_msg);
   });
 
   test(`${test_id++}. Submitting form via 'Enter' while in input field`, 
