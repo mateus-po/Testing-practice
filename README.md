@@ -10,7 +10,7 @@ Testcases can be found in [testDataset.json](Internship-Task-OpenX/testDataset.j
 + **output** - provides correct answer for given input
 + **explanation** - gives explanation to the test case, tells what is tested
 
-Furthermore, the JavaScript file [longestSubstring.js](Internship-Task-OpenX/longestSubstring.js) provides algorythm that find the lenght of the longest substring without repeating characters. File [longestSubstring.test.js](Internship-Task-OpenX/longestSubstring.test.js) allows to test the algorythm using the dataset with provided test cases. It uses Jest as a testing module.
+Furthermore, the JavaScript file [longestSubstring.js](Internship-Task-OpenX/longestSubstring.js) provides algorythm that finds the length of the longest substring without repeating characters. File [longestSubstring.test.js](Internship-Task-OpenX/longestSubstring.test.js) allows to test the algorythm using the dataset with provided test cases. It uses Jest as a testing module.
 
 ## Task 2.
 Testing [sample login UI](http://uitestingplayground.com/sampleapp) is done in [loginUI.test.js](Internship-Task-OpenX/loginUI.test.js). As a testing framework it also uses Jest. Additionally it uses Puppeteer module to automatically navigate the page.
@@ -23,14 +23,14 @@ npm install
 ```
 This will install all the dependencies that are used in the project.
 
-3. To run tests from the Task 1, run:
+3. Running tests from the Task 1:
 ```
 npm test ./longestSubstring.test.js
 ```
 Screenshot of successfully ran tests:
 ![Screenshot of the tests of longestSubstring.js](screenshots/longestSubstring_test_screenshot.PNG)
 
-4. To run tests from the Task 2, run:
+4. Running tests from the Task 2:
 ```
 npm test ./loginUI.test.js
 ```
